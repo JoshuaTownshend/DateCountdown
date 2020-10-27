@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel='stylesheet' href='countdown.css' type='text/css' media='screen' charset='utf-8'>
+</head>
+
+<body>
+    <div class="page">
+        <div class="wrapper">
+            <div class="subwrapper">
+                <h2>Countdown to:</h2>
+                <span id="td">DD</span> - <span id="tm">MM</span> - <span id="ty">YYYY</span><br><br>
+
+                <div class="countdown-container">
+                    <div class="countdown-el days">
+                        <span id="days">0</span><br>
+                        <span id->days</span>
+                    </div>
+                    <div class="countdown-el hours">
+                        <span id="hours">0</span><br>
+                        <span>hours</span>
+                    </div>
+                    <div class="countdown-el mins">
+                        <span id="mins">0</span><br>
+                        <span>mins</span>
+                    </div>
+                    <div class="countdown-el secs">
+                        <span id="secs">0</span><br>
+                        <span>secs</span>
+                    </div>
+                </div>
+
+                <div class="calender-container">
+                    <div class="calender-buttons">
+                        <button class="calender-button submit" type="submit" id="previous" onclick="previous()"><i
+                                class="fas fa-angle-left"></i></button>
+                        <h3 id="monthAndYear"></h3>
+                        <button class="calender-button submit" type="submit" id="next" onclick="next()"><i
+                                class="fas fa-angle-right"></i></button>
+                    </div>
+                    <div class="calender-dropdown">
+                        <label for="month">Jump to: </label>
+                        <select name="month" id="month" onchange="jump()">
+                            <option value=0>Jan</option>
+                            <option value=1>Feb</option>
+                            <option value=2>Mar</option>
+                            <option value=3>Apr</option>
+                            <option value=4>May</option>
+                            <option value=5>Jun</option>
+                            <option value=6>Jul</option>
+                            <option value=7>Aug</option>
+                            <option value=8>Sep</option>
+                            <option value=9>Oct</option>
+                            <option value=10>Nov</option>
+                            <option value=11>Dec</option>
+                        </select>
+                        <select name="year" id="year" onchange="jump()">
+                            <option value=2019>2019</option>
+                            <option value=2020>2020</option>
+                            <option value=2021>2021</option>
+                            <option value=2022>2022</option>
+                        </select>
+                    </div>
+                    <table id="calender" onclick="submit(event)">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="calender-table">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src='countdown.js'></script>
+</body>
+
+</html>
